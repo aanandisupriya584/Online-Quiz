@@ -1,5 +1,5 @@
 const timeH =  document.querySelector('h4');
-let timeSecond = 10;
+let timeSecond = 100;
 displayTime(timeSecond)
 const countDown = setInterval(()=> {
 timeSecond--;

@@ -1,11 +1,30 @@
 const timeH =  document.querySelector('h4');
-let timeSecond = 300;
+let timeSecond = 10;
 displayTime(timeSecond)
 const countDown = setInterval(()=> {
 timeSecond--;
 displayTime(timeSecond);
 if(timeSecond<=0 || timeSecond<1){
 clearInterval(countDown);
+
+alert('Time out');
+if(timeSecond==0){
+    document.getElementById('innerPage').style.display="none";
+    showScore.innerHTML = `
+            <h2> You got score: ${score}/${quizDB.length} </h2>
+                <br>
+                Questions        Answers
+                 Q1       ->      (option1)
+                 <br>
+                 Q2       ->      (option4)
+                 <br>
+                 Q3        ->     (option3)
+                 <br>
+                 Q4        ->     (option3)
+                 <br> 
+        `;
+
+}
 }
 },1000)
 function displayTime(second){
@@ -77,6 +96,8 @@ const quizDB = [
         option3.innerText = questionList.c;
         option4.innerText = questionList.d;
     }
+    
+    
 
     loadQuestion(); 
 
@@ -90,53 +111,53 @@ const quizDB = [
         });
         return answer;
     };
-
+    
     submit.addEventListener('click',() => { 
         const checkedAnswer = getCheckAnswer();
         console.log(checkedAnswer);
-    
-    
-    if (checkedAnswer === quizDB[questionCount].ans) {
+     if (checkedAnswer === quizDB[questionCount].ans) {
         score++;
     };
-         questionCount++;
-         
-  
+         questionCount++; 
     if(questionCount < quizDB.length){
         loadQuestion();
     }
     else {
+        
+        document.getElementById('innerPage').style.display="none";
         showScore.innerHTML = `
             <h3> You scored ${score}/${quizDB.length} </h3>
-
-            <button class="btn" onclick="location.reload()">Play Again</button>
+                <br>
+                Questions        Answers
+                <br>
+                 Q1      ->       (option1)
+                 <br>
+                 Q2      ->      (option4)
+                 <br>
+                 Q3      ->       (option3)
+                 <br>
+                 Q4       ->      (option3)
+                 <br> 
         `;
-
+      
         showScore.classList.remove('scoreArea');
     }
+    
+});
+//previous
+sub.addEventListener('click',() => { 
+   
+/*if (checkedAnswer === quizDB[questionCount].ans) {
+    score++;
+};*/
+
+if(questionCount >0){
+    
+    questionCount--;
+    loadQuestion();
+}
 });
 
-  
-     
-
-    
        
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     

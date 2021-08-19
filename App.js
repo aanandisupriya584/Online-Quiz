@@ -9,6 +9,7 @@ clearInterval(countDown);
 
 alert('Time out');
 if(timeSecond==0){
+    
     document.getElementById('innerPage').style.display="none";
     showScore.innerHTML = `
             <h2> You got score: ${score}/${quizDB.length} </h2>

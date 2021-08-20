@@ -10,10 +10,13 @@ html{
 	font-size:62.5%;
 }
 .example{
-	color:blue;
+	color:#c8dbde;
+	font-size: auto;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	text-align: center;
-	text-shadow: 2px 2px 4px #000000;
-	border-bottom: solid ;
+	border-bottom: double ;
+	border-bottom-color: black;
+	background-color: teal;
 	padding-bottom:10px;
 	margin:0px;
 }
@@ -28,7 +31,7 @@ html{
 	box-shadow:0px 3px 5px 1px rgba(0,0,0,0.1);
 }
 .quiz_box header.exmp{
-	color:gray;
+	color:black;
 	text-align:center;
 	justify-content:space-between;
 	width:145px;
@@ -41,21 +44,24 @@ html{
 
 .main{
 	width:100vw;
+	padding-top:20px;
     min-height:100vh;
 	display:grid;
 	place-items: center;
-	background-color:hsl(206,92%,94%);
+	background-color:#fff;
+	
 }
+
 .inner{
 	width:70vw;
-	background-color:#fff;
+	background-color:#194770;
+	color:	tomato;
 	padding:10rem 18rem;
 	margin: 30px;
 	border:groove;
 	border-radius:12px;
 	border-width: 3px;
-	border-color:blue;
-	box-shadow:10px 10px 5px grey;
+	box-shadow:10px 10px 5px #9eb1a5;
 	display:show;
 	margin:auto;
 }
@@ -75,22 +81,24 @@ html{
 
 
 #submit,.btn{
-	background-color: #4CAF50;
+	background-color: green;
 	padding: 10px 10px;
 	outline:none;
-	color: white;
+	color: #fff;
 	text-shadow:1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
     text-decoration: none;
     display: inline;
 	margin: auto;
     font-size: 16px;
-   
+    
+
 }
+
 #sub{
-	background-color: #4CAF50;
+	background-color:green;
 	padding: 10px 10px;
 	outline:none;
-	color: white;
+	color:#fff;
 	text-shadow:1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
     text-decoration: none;
     display: inline;
@@ -99,7 +107,6 @@ html{
 }
 #showScore{
 	width:40vw;
-	background-color:#fff;
 	padding:0rem 0rem;
 	margin: 30px;
 	border:groove;
@@ -107,18 +114,18 @@ html{
 	border-width: 3px;
 	border-color:black;
 	text-align: center;
-	color:blue;
+	background-color: #194770;
+	color:#fff;
 	box-shadow:10px 10px 5px grey;
 	display:block;
 	margin:auto;
-
 
 }
 .scoreArea{
 	display:show;
 	margin:auto;
+	
 }
-
 
 	
 	
